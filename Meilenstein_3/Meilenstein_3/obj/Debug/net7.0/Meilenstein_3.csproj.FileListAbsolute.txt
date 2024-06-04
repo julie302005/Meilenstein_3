@@ -1,0 +1,14 @@
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/bin/Debug/net7.0/Meilenstein_3
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/bin/Debug/net7.0/Meilenstein_3.deps.json
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/bin/Debug/net7.0/Meilenstein_3.runtimeconfig.json
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/bin/Debug/net7.0/Meilenstein_3.dll
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/bin/Debug/net7.0/Meilenstein_3.pdb
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.GeneratedMSBuildEditorConfig.editorconfig
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.AssemblyInfoInputs.cache
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.AssemblyInfo.cs
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.csproj.CoreCompileInputs.cache
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.dll
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/refint/Meilenstein_3.dll
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.pdb
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/Meilenstein_3.genruntimeconfig.cache
+/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/Debug/net7.0/ref/Meilenstein_3.dll

@@ -1,0 +1,14 @@
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\bin\Debug\net7.0\Meilenstein_3.exe
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\bin\Debug\net7.0\Meilenstein_3.deps.json
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\bin\Debug\net7.0\Meilenstein_3.runtimeconfig.json
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\bin\Debug\net7.0\Meilenstein_3.dll
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\bin\Debug\net7.0\Meilenstein_3.pdb
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.AssemblyInfoInputs.cache
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.AssemblyInfo.cs
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.csproj.CoreCompileInputs.cache
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.dll
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\refint\Meilenstein_3.dll
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.pdb
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\Meilenstein_3.genruntimeconfig.cache
+C:\Users\z004pkar\Desktop\UNI\Semester 2\OOP_Praktikum\Meilenstein_3\Meilenstein_3\obj\Debug\net7.0\ref\Meilenstein_3.dll

@@ -1,4 +1,8 @@
-﻿namespace Meilenstein_3
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Xml.Linq;
+
+namespace Meilenstein_3
 {
     interface IDriveable
     {
@@ -28,105 +32,228 @@
             Model = amodel;
             Year = ayear;
         }
-        public abstract void DisplayInfo()
-        {
-            Console.WriteLine($"Das Fahrzeug hat die Daten: \n Hersteller: {Marke}, Modell: {Model}, Baujahr: {Year}");
-        }
 
         public void Start()
         {
-            Console.WriteLine("Das Fahrzeug startet.");
+            Console.WriteLine("Das Fahrzeug startet.\n");
         }
+        public abstract void DisplayInfo();
+
         public abstract void Drive();
         public abstract void Refuel();
         public abstract void PerformMaintenance();
         public abstract void CheckOil();
     }
-    public class Car :Vehicle
+
+    public class Car : Vehicle                                                                                    // Car erbt von Vehicle
     {
         public int NumberOfDoors { get; set; }
-        public Car(string amarke, string amodel, int ayear, int anumberOfDoors) : base(amarke, amodel, ayear)
+        public Car(string amarke, string amodel, int ayear, int anumberOfDoors) : base(amarke, amodel, ayear)     //erbt die Eigenschaften der Oberklasse
         {
             NumberOfDoors = anumberOfDoors;
         }
-        public void Drive() 
+
+        public override void Drive()
         {
-            Console.WriteLine($"...fährt.");
+            Console.WriteLine($"Das Auto {Marke} {Model} fährt.\n");
         }
-        public void Refuel()
+        public override void Refuel()
         {
-            Console.WriteLine($"...wird betankt.");
+            Console.WriteLine($"Das Auto {Marke} {Model} wird betankt.\n");
         }
-        public void PerformMaintenance()
+        public override void PerformMaintenance()
         {
-            Console.WriteLine($"...wird gewartet.");
+            Console.WriteLine($"Das Auto {Marke} {Model} wird gewartet.\n");
         }
-        public void CheckOil()
+        public override void CheckOil()
         {
-            Console.WriteLine($"Der Ölstand...wird geprüft.");
-        ]}
-        public void DisplayInfo()
+            Console.WriteLine($"Der Ölstand vom Auto {Marke} {Model} wird geprüft.\n");
+        }
+        public override void DisplayInfo()
         {
-            Console.WriteLine($"Das Fahrzeug hat die Daten: \n Hersteller: {Marke}, Modell: {Model}, Baujahr: {Year}");
+            Console.WriteLine($"Auto-Marke: {Marke}, Modell: {Model}, Baujahr: {Year}\n");
         }
     }
-    public class Truck :Vehicle, ILoadable
+
+    public class Truck : Vehicle, ILoadable
     {
         public int LoadCapacity { get; set; }
-        public void LoadCargo(int weight);
+
         public Truck(string amarke, string amodel, int ayear, int aloadCapacity) : base(amarke, amodel, ayear)
         {
             LoadCapacity = aloadCapacity;
         }
         public override void Drive()
         {
-            Console.WriteLine($"...fährt.");
+            Console.WriteLine($"Der LKW {Marke} {Model} fährt.\n");
         }
         public override void Refuel()
         {
-            Console.WriteLine($"...wird betankt.");
+            Console.WriteLine($"Der LKW {Marke} {Model} wird betankt.\n");
         }
         public override void PerformMaintenance()
         {
-            Console.WriteLine($"...wird gewartet.");
+            Console.WriteLine($"Der LKW {Marke} {Model} wird gewartet.\n");
         }
         public override void CheckOil()
         {
-            Console.WriteLine($"Der Ölstand...wird geprüft.");
+            Console.WriteLine($"Der Ölstand des LKWs {Marke} {Model} wird geprüft.\n");
         }
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Das Fahrzeug hat die Daten: \n Hersteller: {Marke}, Modell: {Model}, Baujahr: {Year}");
+            Console.WriteLine($"LKW-Marke: {Marke}, Modell: {Model}, Baujahr: {Year}\n");
+        }
+
+        public void LoadCargo(int weight)
+        {
+            if (weight > LoadCapacity)
+            {
+                throw new InvalidOperationException("Die Ladung überschreitet die maximale Ladekapazität.\n");
+            }
+            Console.WriteLine($"Ladung von {weight} kg wird geladen.\n");
         }
     }
 
-    public class Fleet :IEnumerable
+    public class FieldNode                                                                           //Anlegen einer einfach verketten Liste
     {
-        //public void AddVehicle(Vehicle vehicle);
-        /*public IEnumerator GetEnumerator()
+        public Vehicle Vehicle { get; set; }
+        public FieldNode Next { get; set; }
+
+        public FieldNode(Vehicle vehicle)
         {
-            return new
-        }*/ 
-        //MoveNext, Reset, Current object noch dazu
+            Vehicle = vehicle;
+            Next = null;
+        }
     }
 
-    class Program
+    public class Fleet : IEnumerable
     {
-        static void InspectVehicle( … )
+        private FieldNode head;
+
+        public Fleet()
         {
-            // vehicle.DisplayInfo();
-            //vehicle.Start();
-            // Hier soll ein Truck beladen werden.
+            head = null;
         }
-        static void Main(string[] args)
+
+        public void AddVehicle(Vehicle vehicle)                                                 // Hinzufügen von Objekten in die Liste
         {
-            //Car car = new Car("Toyota", "Corolla", 2020, 4);
-            //Truck truck = new Truck("MAN", "TGX", 2018, 12000);
-            //Fleet fleet = new Fleet();
-            //fleet.AddVehicle(car);
-            //fleet.AddVehicle(truck);
-            // Hier soll die Methode InspectVehicle(...)
-            // für alle Fahrzeuge ausgeführt werden.
+            FieldNode newNode = new FieldNode(vehicle);
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                FieldNode current = head;
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = newNode;
+            }
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            return new FleetEnumerator(head);
+        }
+
+        private class FleetEnumerator : IEnumerator
+        {
+            private FieldNode current;
+            private FieldNode head;
+
+            public FleetEnumerator(FieldNode head)
+            {
+                this.head = head;
+                current = null;
+            }
+
+            public bool MoveNext()
+            {
+                if (current == null)
+                {
+                    current = head;
+                }
+                else
+                {
+                    current = current.Next;
+                }
+                if (current == null)
+                {
+                    return false;
+                }
+                else { return true; }
+            }
+
+            public void Reset()
+            {
+                current = null;
+            }
+
+            public object Current
+            {
+                get
+                {
+                    if (current == null)
+                    {
+                        throw new InvalidOperationException("Es gibt aktuell kein aktuelles Fahrzeug");
+                    }
+                    return current.Vehicle;
+                }
+            }
+        }
+    }
+
+    public class Program
+    {
+        public static void InspectVehicle(Vehicle vehicle)
+        {
+            Console.WriteLine(" ---- Verwaltung eines Fuhrparks: ---- ");
+
+            vehicle.DisplayInfo();
+            vehicle.Start();
+            vehicle.Drive();
+            vehicle.Refuel();
+            vehicle.PerformMaintenance();
+            vehicle.CheckOil();
+
+            if (vehicle is Car car)
+            {
+                Console.WriteLine($"Anzahl der Türen: {car.NumberOfDoors}\n");
+            }
+            else if (vehicle is Truck truck)
+            {
+                Console.WriteLine($"Ladekapazität: {truck.LoadCapacity} kg\n");
+                try
+                {
+                    truck.LoadCargo(5000);
+                }
+                catch (InvalidOperationException ex)
+                {
+                    Console.WriteLine($"Fehler beim Laden des LKW: {ex.Message}\n");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Es ist ein Fehler aufgetreten, bitte Fragen Sie den Admin");
+                }
+            }
+        }
+
+        public static void Main(string[] args)
+        {
+            Car car = new Car("Toyota", "Corolla", 2020, 4);
+            Truck truck = new Truck("MAN", "TGX", 2018, 12000);
+
+            Fleet fleet = new Fleet();
+            fleet.AddVehicle(car);
+            fleet.AddVehicle(truck);
+
+            foreach (Vehicle vehicle in fleet)
+            {
+                InspectVehicle(vehicle);
+            }
         }
     }
 }
+

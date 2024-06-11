@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z004pkar\\Desktop\\UNI\\Semester 2\\OOP_Praktikum\\Meilenstein_3\\Meilenstein_3\\Meilenstein_3.csproj": {}
+    "/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/Meilenstein_3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z004pkar\\Desktop\\UNI\\Semester 2\\OOP_Praktikum\\Meilenstein_3\\Meilenstein_3\\Meilenstein_3.csproj": {
+    "/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/Meilenstein_3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z004pkar\\Desktop\\UNI\\Semester 2\\OOP_Praktikum\\Meilenstein_3\\Meilenstein_3\\Meilenstein_3.csproj",
+        "projectUniqueName": "/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/Meilenstein_3.csproj",
         "projectName": "Meilenstein_3",
-        "projectPath": "C:\\Users\\z004pkar\\Desktop\\UNI\\Semester 2\\OOP_Praktikum\\Meilenstein_3\\Meilenstein_3\\Meilenstein_3.csproj",
-        "packagesPath": "C:\\Users\\z004pkar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z004pkar\\Desktop\\UNI\\Semester 2\\OOP_Praktikum\\Meilenstein_3\\Meilenstein_3\\obj\\",
+        "projectPath": "/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/Meilenstein_3.csproj",
+        "packagesPath": "/Users/9xu11/.nuget/packages/",
+        "outputPath": "/Users/9xu11/Desktop/Meilenstein_3/Meilenstein_3/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\z004pkar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/9xu11/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

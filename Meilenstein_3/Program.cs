@@ -71,7 +71,7 @@ namespace Meilenstein_3
         }
         public override void DisplayInfo()
         {
-            Console.WriteLine($"Auto-Marke: {Marke}, Modell: {Model}, Baujahr: {Year}\n");
+            Console.WriteLine($"Auto-Marke: {Marke}, Modell: {Model}, Baujahr: {Year}, Türen: {NumberOfDoors}\n");
         }
     }
 
@@ -218,16 +218,12 @@ namespace Meilenstein_3
             vehicle.PerformMaintenance();
             vehicle.CheckOil();
 
-            if (vehicle is Car car)
-            {
-                Console.WriteLine($"Anzahl der Türen: {car.NumberOfDoors}\n");
-            }
-            else if (vehicle is Truck truck)
+            if (vehicle is Truck truck)
             {
                 Console.WriteLine($"Ladekapazität: {truck.LoadCapacity} kg\n");
                 try
                 {
-                    truck.LoadCargo(5000);
+                    truck.LoadCargo(500);
                 }
                 catch (InvalidOperationException ex)
                 {
@@ -256,4 +252,3 @@ namespace Meilenstein_3
         }
     }
 }
-
